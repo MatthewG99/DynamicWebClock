@@ -1,0 +1,71 @@
+.dynamic-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: yellow;
+  color: #fff;
+  animation: moveGradient 10s infinite linear;
+  background-size: 200% 200%;
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.clock {
+  background-color: #444;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 500px;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#calendar-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 6em;
+  margin: 20px;
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+#dayOfWeek {
+  font-size: 3em;
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background: linear-gradient(45deg, #fad0c4, #ff9a9e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media only screen and (max-width: 600px) {
+  .clock {
+    width: 350px;
+  }
+  #calendar-text {
+    font-size: 4rem;
+  }
+  #dayOfWeek {
+    font-size: 2em;
+  }
+}
